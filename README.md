@@ -43,6 +43,6 @@ public class ProcessData implements JsonIOData {
 이 후 다른 코드에서 아래와 같이 사용하면 됩니다.
 
 ```
-JsonWriter.createAndLoadJsonFile(object, PortData.class, PortData::of);
-JsonWriter.removeDataInJsonFile(processName, PortData.class);
+JsonWriter.createAndLoadJsonFile(object, ProcessData.class, ProcessData::of);
+JsonWriter.removeDataInJsonFile(processName, ProcessData.class);
 ```
