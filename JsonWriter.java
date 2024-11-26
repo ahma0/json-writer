@@ -116,7 +116,15 @@ public class JsonWriter {
     }
 
     private static boolean doesJsonFileExists(Path filePath) {
-        return filePath.toFile().exists();
+        boolean doesExist = false;
+        
+        try {
+            doesExist = Files.exists(filePath);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
+
+        return doesExist;
     }
 
     private static @NotNull String getFilePath(String processName, @NotNull Class<?> clazz) {
