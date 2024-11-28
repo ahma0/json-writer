@@ -150,7 +150,8 @@ public class JsonWriter {
     }
 
     private static String getExtension(@NotNull Class<?> clazz) {
-        return clazz.equals(PortJsonIOData.class) ? "_PORT.json" : ".json";
+        return ".json";
+        // return clazz.equals(___.class) ? "_PORT.json" : ".json";
     }
 
 }
